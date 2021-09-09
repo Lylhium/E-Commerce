@@ -1,23 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
-
+import NavBar from './components/NavBar/NavBar';
 function App() {
-  return (
-    <div className="App">
-  <h1> Lilius Hardware </h1>
-  <CardComponent text= {"Placa de video 1"}/>
-  <CardComponent text= {"Placa de video 2"}/>
-  <CardComponent text= {"Placa de video 3"}/>
-
-    </div>
-  );
-}
-const CardComponent = (props) => {
 
 return (
-<div>
-  <p>{props.text} </p>
-</div>
-)}
+<div className= "prueba">
+<NavBar></NavBar>
 
-export default App;
+<h1 className="title">Bienvenido A CocoLight! </h1>
+
+</div>
+ 
+
+);
+}
+
+export 
+default App;
