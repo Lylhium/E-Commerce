@@ -7,7 +7,7 @@ return (
 <div className= "prueba">
 <NavBar></NavBar>
 
-<h1 className="title">Bienvenido A CocoLight! </h1>
+<h1 className="title"> Bienvenido a  CocoLight !</h1>
 
 </div>
  
