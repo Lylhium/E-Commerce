@@ -1,0 +1,19 @@
+div.first-product {
+    float:left;
+    width:20%;
+    margin: 20px;
+    box-shadow: 1px 1px 6px rgb(202, 202, 202);
+    padding: 10px 20px;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(182, 144, 93);
+    color: rgb(68, 56, 49);
+    border-radius: 15px;
+    }
+
+    div.first-product img{ 
+
+        border-radius: 15px;
+    }
+    

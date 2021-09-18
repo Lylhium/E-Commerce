@@ -6,6 +6,9 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+//externo fontawesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {  faCartPlus } from '@fortawesome/free-solid-svg-icons'
 
 const NavBar = () => {
 
@@ -24,6 +27,13 @@ return (
         <li> <Button color="inherit">Cosmeticos</Button></li> 
         <li> <Button color="inherit">Contacto</Button></li> 
         </ul>
+        <div className="cart-button">
+        <Button variant="contained">
+        <FontAwesomeIcon icon={faCartPlus}/>
+        <p> 4 </p>
+        </Button>
+      
+           </div>
         </Toolbar>
       </AppBar>
 
