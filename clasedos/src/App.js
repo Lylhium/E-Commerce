@@ -6,6 +6,8 @@ import Maps from './components/Maps/maps';
 import Cartwidget from './components/CartWidget/Cartwidget';
 import ListProducts from './components/ListProducts/ListProducts';
 
+
+
 function App() {
 
 return (
@@ -15,9 +17,10 @@ return (
 
 <div className="title"> Bienvenido a CocoLight !</div>
 
-<Card/>
-<Cartwidget/>
+
+
 <ListProducts/>
+
 <Maps/>
 
 

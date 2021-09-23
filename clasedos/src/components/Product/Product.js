@@ -1,9 +1,6 @@
 import React from "react"
-
+import ItemCount from "../ItemCount/ItemCount"
 import ProductImagen from '../../assets/producto1.png'
-import ProductImagen2 from '../../assets/producto2.png'
-import ProductImagen3 from '../../assets/producto3.jpg'
-import ProductImagen4 from '../../assets/producto4.jpg'
 
 import '../Product/Product.css'
 
@@ -16,14 +13,11 @@ const  Product= (props) => {
          </div>  
       
         <h3>{props.title}</h3>
-        <p className="pricesize">{props.price} </p>
-        <button>Buy</button>
-    </div>
-
-    
-       
-    )
-    
+          <p className="pricesize">{props.price} </p>
+          <ItemCount/>
+          <a class="button1">Comprar</a>
+         </div> 
+     ) 
     }
     
     export default  Product

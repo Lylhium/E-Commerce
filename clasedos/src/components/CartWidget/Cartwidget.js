@@ -17,15 +17,15 @@ import React from "react";
 
 //function Component 
 
-const functioncomp = (props) => {
+//const functioncomp = (props) => {
 
-    const {nombre, apellido} = props
-return (
-    <div>
-  function component
-    </div>
-)
+ //   const {nombre, apellido} = props
+//return (
+ //   <div>
+ // function component
+ //   </div>
+//)
 
-}
+//}
 
-export default functioncomp
+//export default functioncomp
