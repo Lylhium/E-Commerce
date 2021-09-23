@@ -16,18 +16,9 @@ return (
 <NavBar/>
 
 <div className="title"> Bienvenido a CocoLight !</div>
-
-
-
-<ListProducts/>
-
-<Maps/>
-
-
-<Footer/>
-
-
-
+   <ListProducts/>
+    <Maps/>
+    <Footer/>
 </div>
 
 );
