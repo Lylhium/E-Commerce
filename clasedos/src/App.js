@@ -1,14 +1,24 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import Card from './components/Card/card';
 import Footer from './components/footer/Footer';
 import Maps from './components/Maps/maps';
-import Cartwidget from './components/CartWidget/Cartwidget';
 import ListProducts from './components/ListProducts/ListProducts';
 
 
 
 function App() {
+
+    const urlPokeApi = 'https://pokeapi.co/api/v2/pokemon/'
+
+fetch(urlPokeApi) 
+.then( (response ) =>{
+return response.json()
+
+})
+.then ( (data) => {
+
+    console.log("pokemon data: " ,data.results)
+})
 
 return (
 
