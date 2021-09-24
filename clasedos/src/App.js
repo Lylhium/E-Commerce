@@ -3,24 +3,14 @@ import NavBar from './components/NavBar/NavBar';
 import Footer from './components/footer/Footer';
 import Maps from './components/Maps/maps';
 import ListProducts from './components/ListProducts/ListProducts';
-
+import { useEffect, useState } from 'react';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 
 function App() {
 
-    const urlPokeApi = 'https://pokeapi.co/api/v2/pokemon/'
 
-fetch(urlPokeApi) 
-.then( (response ) =>{
-return response.json()
-
-})
-.then ( (data) => {
-
-    console.log("pokemon data: " ,data.results)
-})
-
-return (
+return ( 
 
 <div className= "prueba">
 <NavBar/>
