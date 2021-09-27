@@ -12,7 +12,7 @@ function App() {
 
 return ( 
 
-<div className= "prueba">
+<div className= "content">
 <NavBar/>
 
 <div className="title"> Bienvenido a CocoLight !</div>

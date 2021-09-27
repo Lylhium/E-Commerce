@@ -14,8 +14,8 @@ const  Product= (props) => {
       
         <h3>{props.title}</h3>
           <p className="pricesize">{props.price} </p>
-          <ItemCount/>
-          <a className="button1">Comprar</a>
+          <ItemCount stock ={props.stock}/>
+          <button className="button1">Comprar</button>
          </div> 
      ) 
     }
