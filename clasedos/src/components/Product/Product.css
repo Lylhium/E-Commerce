@@ -17,24 +17,25 @@ div.first-product {
         border-radius: 15px;
     }
     
-    a.button1{
+.button1{
 display:inline-block;
 padding:0.35em 1.2em;
-border:0.1em solid #FFFFFF;
+border:0.1em solid #6d5038;
 margin:0 0.3em 0.3em 0;
 border-radius:15px;
 box-sizing: border-box;
 text-decoration:none;
 font-family:'Roboto',sans-serif;
 font-weight:300;
-color:#FFFFFF;
+color:#8a6651;
 text-align:center;
 transition: all 0.2s;
 cursor: pointer;
+background-color: rgb(223, 209, 202);
         }
-a.button1:hover{
-color:#000000;
-background-color:#FFFFFF;
+.button1:hover{
+color:#ffffff;
+background-color:#816052;
         }
 @media all and (max-width:30em){
 a.button1{
