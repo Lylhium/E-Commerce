@@ -9,7 +9,7 @@ const  Product= (props) => {
     return (
         <div className= "first-product">
          <div> 
-        <img src={`../assets/${props.image} `} />
+        <img alt="imagen producto" src={`../assets/${props.image} `} />
          </div>  
       
         <h3>{props.title}</h3>

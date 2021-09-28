@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Product from "../Product/Product";
-import ListProductos from "../ListProducts/ListProductos.css"
+import '../ListProducts/ListProducts.css'
 export default function ListProducts() {
 const [products, setProduct] = useState([])
 

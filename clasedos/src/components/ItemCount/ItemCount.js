@@ -7,8 +7,7 @@ const [items, setItems]  = useState(0)
 
 
 const Add = () => {
- {
-     if(items < props.stock){
+ {if(items < props.stock){
     setItems (items + 1)
     }
 }

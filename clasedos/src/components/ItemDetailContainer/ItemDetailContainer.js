@@ -1,10 +1,10 @@
-  /*import React,{useState, useEffect} from "react";
+import React,{useState, useEffect} from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
 
 function ItemDetailContainer() {
 
-    const [ProductInfo, setProductInfo] =  useState();
+    const [ProductInfo, setProductInfo] =  useState([])
 
     const ObtenerProducts = new Promise ((resolve) =>{
         setTimeout(()=>{
@@ -14,7 +14,7 @@ function ItemDetailContainer() {
               title: "Cacao en polvo" ,
               img: 'producto1.png' ,
               price: '$650' ,
-              description: 'cacao en polvo de 500gr.',
+              description: 'cacao en polvo de 500gr. (incluyen 3 sobres)',
               stock: '10'
           }
       
@@ -32,12 +32,11 @@ ObtenerProducts.then((response) => {
     return ( 
     
     <div className="Detail-Container">
-    contenedor de detalles
-    {console.log("infoProduct: ", ProductInfo)}
+
     <ItemDetail data= {ProductInfo}/>
     </div>
       );
     }
     
     export  default ItemDetailContainer;
-    */
+    

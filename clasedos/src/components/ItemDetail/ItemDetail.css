@@ -1,0 +1,46 @@
+
+
+
+div.item-image img {
+    border-radius: 15px;
+    text-align: center;
+}
+h2 {
+    color:rgb(228, 221, 216);
+    text-align: center;
+}
+
+div.item-price-detail {
+    text-align: center;
+color:  rgb(228, 221, 216);
+font-size: 30px;
+}
+
+div.item-description {
+    text-align: center;
+    font-size: 18px;
+color: rgb(228, 221, 216);
+
+}
+
+div.item-stock{
+    text-align: center;
+    color:  #3b2e28;
+    
+    }
+
+    div.Item-Detail {
+        float:left; 
+        border-radius: 15px;
+        width:20%;
+        margin: 20px;
+        box-shadow: 1px 1px 6px rgb(202, 202, 202);
+        padding: 10px 20px;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        background-color: rgb(146, 120, 86);
+        color: rgb(68, 56, 49);
+        border-radius: 15px;
+        }
+    
