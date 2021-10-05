@@ -1,18 +1,18 @@
-
+//imports
 import './footer.css';
 
-//externo materialui
-
-
 const Footer = () => (
-    <div className="footer">
-      <div className="footer-text">Nuestras Redes</div>
-      <ul className="links-footer">
-          <li> <a href="https://web.whatsapp.com/">Whatsapp</a></li>
-          <li> <a href="https://www.instagram.com/">Instagram</a></li>
-          <li> <a href="https://www.facebook.com">Facebook</a></li>
-      </ul>
+ <div className="footer">
+   <div className="footer-text">Seguinos en nuestras Redes Sociales!</div>
+     <div className="footer-links">
+       <ul>
+          <li> <a className='whatsapp' href="https://web.whatsapp.com/">Whatsapp</a></li>
+          <li> <a className='instagram' href="https://www.instagram.com/">Instagram</a></li>
+          <li> <a className='facebook'href="https://www.facebook.com">Facebook</a></li>
+       </ul>
+       <div className='footer-info'> ©2021 CopyRight: CocoLight</div>
     </div>
+ </div>
   );
 
 

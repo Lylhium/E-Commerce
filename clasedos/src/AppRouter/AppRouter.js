@@ -1,18 +1,32 @@
+//react imports
 import React from "react";
 import {BrowserRouter, Route , Switch} from 'react-router-dom'
+//import pages
+import Home from "../Pages/Home";
+import Preguntas from "../Pages/Preguntas";
+import Productos from "../Pages/Productos";
+import Contacto from "../Pages/Contacto";
+import NotFound from "../Pages/NotFound";
+import ItemDetailPage from "../Pages/ItemDetailPage";
 import ListProducts from "../components/ListProducts/ListProducts";
-export default function AppRouter(){
+//import components
+import NavBar from "../components/NavBar/NavBar";
 
-    return (
-   <BrowserRouter>
-        <Switch> 
-          <Route exact path="/productos">
-                <div>pantalla de productos</div>
-         </Route>
-          <Route path="/" >
-       </Route>
+export default function AppRouter(){
+       return (
+ <BrowserRouter>
+     <NavBar/>
+    
+   <Switch>
+       <Route exact path="/" component={Home}/>
+       <Route path="/contacto" component={Contacto}/>
+       <Route path="/productos" component={Productos}/>
+       <Route path="/preguntas" component={Preguntas}/>
+       <Route path="/ProductDetailPage/:productId" component={ItemDetailPage}/>
+       <Route path="/category/:categoryId" component={ListProducts} />
+       <Route path="/*" component={NotFound}/>
    </Switch>
-   </BrowserRouter>
+ </BrowserRouter>
 
     )
 }

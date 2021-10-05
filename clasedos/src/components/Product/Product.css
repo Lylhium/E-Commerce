@@ -1,46 +1,90 @@
-div.first-product {
-    float:left;
-    width:20%;
-    margin: 20px;
-    box-shadow: 1px 1px 6px rgb(202, 202, 202);
-    padding: 10px 20px;
-    justify-content: center;
-    flex-direction: column;
+
+div.card{
+    padding-bottom: 10px;
+    padding-top: 90px;
+    display: inline-block;
     text-align: center;
-    background-color: rgb(182, 144, 93);
-    color: rgb(68, 56, 49);
+    width: 20%;
+    padding-left: 30px;
+    color: white;
+
+}
+div.first-product{
+    background-color: rgb(43, 43, 43);
+    padding-top: 10px;
     border-radius: 15px;
+}
+
+
+div.producto-title {
+   background-color: rgb(197, 190, 190);
+   border-radius: 5px;
+   color: rgb(43, 43, 43);
+    font-size: 25px;
+
+    }
+div.producto-description{
+        padding-top: 15px;
+        font-size: 20px;
+        color: rgb(180, 175, 175);
     }
 
-    div.first-product img{ 
-
+div.first-product img{ 
+       width: 90%;
+       height: auto;
         border-radius: 15px;
+    }
+    
+p.price{
+        color: rgba(255, 255, 255, 0.952);
+      
+        border-radius: 5px;
+        font-size: 32px;
     }
     
 .button1{
 display:inline-block;
 padding:0.35em 1.2em;
-border:0.1em solid #6d5038;
+border:0.1em solid #000000;
 margin:0 0.3em 0.3em 0;
 border-radius:15px;
 box-sizing: border-box;
 text-decoration:none;
-font-family:'Roboto',sans-serif;
-font-weight:300;
-color:#8a6651;
+display: center;
+font-size: 18px;
+color:rgb(31, 30, 30);
 text-align:center;
 transition: all 0.2s;
 cursor: pointer;
-background-color: rgb(223, 209, 202);
+background-color: rgb(235, 227, 227);
         }
 .button1:hover{
 color:#ffffff;
-background-color:#816052;
+border:0.1em solid #ffffff;
+background-color:rgb(41, 40, 40);
         }
+
+.button2{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border-radius: 15px;
+    border:0.1em solid #000000;
+    color:rgb(31, 30, 30);
+    text-align:center;
+    transition: all 0.2s;
+    cursor: pointer;
+    background-color: rgb(235, 227, 227);
+        }  
+.button2:hover{
+     color:#ffffff;
+     border:0.1em solid #ffffff;
+     background-color:rgb(41, 40, 40);   
+}  
 @media all and (max-width:30em){
 a.button1{
 display:block;
 margin:0.4em auto;
 }
+
 
 }

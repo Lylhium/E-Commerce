@@ -1,7 +1,7 @@
 div.loading {
-    color:rgb(126, 95, 70);
-    font-size: 40px;
+    height: auto;
     text-align: center;
-    padding-top: 75px;
-    padding-bottom: 75px;
+    padding-top: 250px;
+    padding-bottom: 250px;
+    transition: all 0.2s;
 }

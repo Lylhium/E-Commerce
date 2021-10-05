@@ -1,33 +1,19 @@
+//style
 import './App.css';
-import NavBar from './components/NavBar/NavBar';
+//import Components
 import Footer from './components/footer/Footer';
 import Maps from './components/Maps/maps';
-import ListProducts from './components/ListProducts/ListProducts';
+//import Pages
 import AppRouter from './AppRouter/AppRouter';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+
 function App() {
+  return ( 
+    <div className= "content">
 
-
-return ( 
-
+         <AppRouter/>
+         <Maps/>
+         <Footer/>
   
-
-<div className= "content">
-<NavBar/>
-
-<div className="title"> Bienvenido a CocoLight !</div>
-   <AppRouter/>
-   <ListProducts/>
-   <ItemDetailContainer/>
-    <Maps/>
-    <Footer/>
-  
-</div>
-
-
-);
-}
-
-
-export 
-default App;
+    </div>
+         );}
+export default App;
