@@ -8,7 +8,8 @@ import Productos from "../Pages/Productos";
 import Contacto from "../Pages/Contacto";
 import NotFound from "../Pages/NotFound";
 import ItemDetailPage from "../Pages/ItemDetailPage";
-import ListProducts from "../components/ListProducts/ListProducts";
+
+import ProductsFilter from "../components/ProductsFilter/ProductsFilter";
 //import components
 import NavBar from "../components/NavBar/NavBar";
 
@@ -23,7 +24,7 @@ export default function AppRouter(){
        <Route path="/productos" component={Productos}/>
        <Route path="/preguntas" component={Preguntas}/>
        <Route path="/ProductDetailPage/:productId" component={ItemDetailPage}/>
-       <Route path="/category/:categoryId" component={ListProducts} />
+       <Route path="/category/:categoryId" component={ProductsFilter}/>
        <Route path="/*" component={NotFound}/>
    </Switch>
  </BrowserRouter>
