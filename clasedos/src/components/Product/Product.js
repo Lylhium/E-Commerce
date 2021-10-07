@@ -1,7 +1,6 @@
 import React from "react"
 import ItemCount from "../ItemCount/ItemCount"
-
-
+import  { Link } from 'react-router-dom'
 import '../Product/Product.css'
 
 const  Product= (props) => {
@@ -16,7 +15,7 @@ const  Product= (props) => {
           <p className="price">{props.price} </p>
           <ItemCount stock ={props.stock}/>
           <button className="button1">Comprar</button>
-          <button className="button2">Ver</button>
+         <a className="button2" href={`/ItemDetailPage/${props.id} ` } style={{ textDecoration: 'none',color:'black'}} >Ver</a>
          </div> 
          </div>
      ) 

@@ -110,7 +110,7 @@ export default function ListProducts() {
         products.map( (product)=> {
 
                      return (
-         <Product key={`item-${product.id}`} title={product.title} price={product.price} image={product.img} stock={product.stock} description={product.description} /> )
+         <Product key={`item-${product.id}`} title={product.title} price={product.price} image={product.img} stock={product.stock} description={product.description} id={product.id} /> )
            })
         ) : (
       <div className='loading'> 

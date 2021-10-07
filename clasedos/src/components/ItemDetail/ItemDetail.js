@@ -7,6 +7,7 @@ function ItemDetail(props) {
     return ( 
     <div className="Item-Detail">
          {console.log("data del item:", props.data)} 
+          
               <div className="item-image"> 
                  <img alt='imagendeproducto'src={`../assets/${props.data.img } `} />
               </div>

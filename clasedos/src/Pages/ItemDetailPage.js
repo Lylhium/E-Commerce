@@ -5,10 +5,14 @@ import { useParams } from "react-router-dom";
 export default function ItemDetailPage() {
 
 const { productId } = useParams ()
+console.log("parametros ", useParams() )
+
+
+
  return(
     <>
-       <p> Id de Producto : {productId}</p>
       <ItemDetailContainer/>
+     
     </> 
  )    
 }

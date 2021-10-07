@@ -44,7 +44,7 @@ return (
             <Link to='/productos' style={{ textDecoration: 'none',color:'white'}}>  <Button color="inherit">Productos</Button> </Link>
        
             {categories.map ( (category)  => {
-             return  <Link style={{ textDecoration: 'none',color:'white'}} to={`/category/${category.id} ` }> {category.name} </Link >
+             return  <a style={{ textDecoration: 'none',color:'white'}} href={`/category/${category.id} ` }> {category.name} </a >
             })}
             </li> 
             <li><Link to='/preguntas' style={{ textDecoration: 'none',color:'white'}}> <Button color="inherit">Preguntas Frecuentes</Button></Link></li> 
