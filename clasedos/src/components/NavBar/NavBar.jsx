@@ -16,7 +16,7 @@ import 'animate.css'
 
 const NavBar = (props) => {
 
-  const  [categories,setCategories] = useState([
+  const  [categories] = useState([
     {name:'Suplementos', 
     id: '1',
     category: '1'

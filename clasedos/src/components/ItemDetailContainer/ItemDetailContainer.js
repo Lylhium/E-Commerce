@@ -5,8 +5,6 @@ import { useParams } from "react-router";
 
 export  default ItemDetailContainer;
     
-
-
 function ItemDetailContainer() {
 
   const {  productId } = useParams(); 
@@ -112,7 +110,7 @@ function ItemDetailContainer() {
                   
 return ( 
      <div className="Detail-Container">
-    {ProductInfo && <ItemDetail data= {ProductInfo}/>}
+    { <ItemDetail data= {ProductInfo}/>}
      </div> );
     }
     

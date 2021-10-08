@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 div.Item-Detail {
-
+    padding-top: 78px;
     background-color: rgb(214, 214, 218);
 }
 div.item-image{

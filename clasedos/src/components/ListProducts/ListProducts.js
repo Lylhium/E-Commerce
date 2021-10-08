@@ -2,12 +2,9 @@
 import React, { useEffect, useState } from "react";
 import Product from "../Product/Product";
 import '../ListProducts/ListProducts.css'
-import { useParams } from "react-router";
+
  
 export default function ListProducts() {
-
-
-  const { categoryId } = useParams () 
   
          const [products, setProduct] = useState([])
 
@@ -97,13 +94,11 @@ export default function ListProducts() {
 
    useEffect(()=>{
        ObtenerProducts.then(  (res) =>{
-       console.log("productos: ", res , categoryId)
-       
        setProduct(res)
        
        })
        
-},[])
+},[ObtenerProducts])
     return (
       <div>
         {products.length !== 0 ? (

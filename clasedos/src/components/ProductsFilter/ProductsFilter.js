@@ -97,11 +97,8 @@ export default function ProductsFilter() {
         useEffect(() => { 
 
             ObtenerProducts.then(res => {
-              console.log('resultados' ,res )
-              console.log('resultado category' , categoryId)
               if (categoryId)  { 
                 const resultadosFiltrados = res.filter(product => product.category === categoryId) 
-                console.log('filtados ',resultadosFiltrados)
                 setProducts(resultadosFiltrados);
 
                 } else {
@@ -109,7 +106,7 @@ export default function ProductsFilter() {
                 
                 }
         })
-    },[])
+    },[ObtenerProducts])
  
     return (
  
