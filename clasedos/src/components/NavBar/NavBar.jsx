@@ -1,5 +1,5 @@
 
-import React, {useState} from 'react'
+import React, {useState,useContext} from 'react'
 import Logo from '../../assets/Logo.png'
 import './NavBar.css';
 import  { Link } from 'react-router-dom'
@@ -12,6 +12,8 @@ import Button from '@material-ui/core/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faCartPlus } from '@fortawesome/free-solid-svg-icons'
 import 'animate.css'
+//export 
+import { CartContext } from '../../Context/CartContext/CartContext';
 
 
 const NavBar = (props) => {
@@ -25,8 +27,12 @@ const NavBar = (props) => {
   id: '2',
   category: '2'
 },
-])
 
+]
+
+)
+const [cart, setCart]= useContext(CartContext);
+const PrecioTotal = cart.reduce((acc,curr) => acc + curr.price , 0);
 
 return (
 
@@ -50,9 +56,14 @@ return (
             <li><Link to='/preguntas' style={{ textDecoration: 'none',color:'white'}}> <Button color="inherit">Preguntas Frecuentes</Button></Link></li> 
             <li><Link to='/contacto' style={{ textDecoration: 'none',color:'white'}}> <Button color="inherit">Contacto</Button></Link></li> 
         </ul>
-            <div className="cart-button"><Link to='/carrito'style={{ textDecoration: 'none',color:'white'}}> 
+
+ 
+      
+
+            <div className="cart-button"><Link to='/cart'style={{ textDecoration: 'none',color:'white'}}> 
       <Button variant="contained">
-      <FontAwesomeIcon icon={faCartPlus}/>
+      <span> items en carrito : {cart.length}</span>
+      <FontAwesomeIcon icon={faCartPlus}/> 
       </Button>
       </Link>
            </div>

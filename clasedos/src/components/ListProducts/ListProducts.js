@@ -15,7 +15,7 @@ export default function ListProducts() {
             id: '1',
             title: "Cacao en polvo" ,
             img: 'producto1.png' ,
-            price: '$650' ,
+            price: 650 ,
             description: 'de 500gr.',
             stock: '7',
             category: '1',
@@ -24,7 +24,7 @@ export default function ListProducts() {
               id: '2',
               title: "Spirulina en polvo" ,
               img: 'producto2.png' ,
-              price: '$700' ,
+              price: 700 ,
               description: ' de 500gr.',
               stock: '9',
               category: '1',
@@ -33,7 +33,7 @@ export default function ListProducts() {
               id: '3',
               title: "Te verde en Polvo" ,
               img: 'producto3.jpg' ,
-              price: '$650' ,
+              price: 650 ,
               description: ' de 500gr.',
               stock: '2',
               category: '1',
@@ -42,7 +42,7 @@ export default function ListProducts() {
                id: '4',
                title: "Te de Manzana" ,
                img: 'producto4.jpg' ,
-               price: '$700' ,
+               price: 700 ,
                description: ' de 500gr.',
                stock: '4',
                category: '1',
@@ -51,7 +51,7 @@ export default function ListProducts() {
         id: '5',
         title: "Serum Multivitaminico" ,
         img: 'producto5.jpg' ,
-        price: '$830' ,
+        price: 830 ,
         description: 'de 60ml.',
         stock: '5',
         category: '2',
@@ -60,7 +60,7 @@ export default function ListProducts() {
           id: '6',
           title: "Aceite de Rosa" ,
           img: 'producto6.png' ,
-          price: '$1.350' ,
+          price: 1350 ,
           description: ' de 10ml.',
           stock: '12',
           category: '2',
@@ -69,7 +69,7 @@ export default function ListProducts() {
           id: '7',
           title: "Shampoo Neutro" ,
           img: 'producto7.jpg' ,
-          price: '$950' ,
+          price: 950 ,
           description: ' de 500ml.',
           stock: '3',
           category: '2',
@@ -78,7 +78,7 @@ export default function ListProducts() {
            id: '8',
            title: "Crema Hidratante" ,
            img: 'producto8.jpg' ,
-           price: '$600' ,
+           price: 600 ,
            description: ' de 235ml.',
            stock: '2',
            category: '2',
@@ -104,12 +104,13 @@ export default function ListProducts() {
         {products.length !== 0 ? (
         products.map( (product)=> {
 
-                     return (
-         <Product key={`item-${product.id}`} title={product.title} price={product.price} image={product.img} stock={product.stock} description={product.description} id={product.id} /> )
+        return (
+                 <Product key={`item-${product.id}`} title={product.title} price={product.price} image={product.img} 
+                                        stock={product.stock} description={product.description} id={product.id} /> )
            })
         ) : (
       <div className='loading'> 
-       <img src={('../../assets/loading.gif')}   alt='loading-gif'/> 
+        <img src={('../../assets/loading.gif')} alt='loading-gif'/> 
       </div>
          
         )}

@@ -13,12 +13,17 @@ import Cart from '../Pages/Cart'
 //import components
 import NavBar from "../components/NavBar/NavBar";
 
+
+//Context
+
+
 export default function AppRouter(){
        return (
  <BrowserRouter>
-     <NavBar/>
+
+   <NavBar/>
     
-   <Switch>
+      <Switch>
        <Route exact path="/" component={Home}/>
        <Route path="/contacto" component={Contacto}/>
        <Route path="/productos" component={Productos}/>
@@ -27,7 +32,10 @@ export default function AppRouter(){
        <Route path="/category/:categoryId" component={ProductsFilter}/>
        <Route path="/cart" component={Cart}/>
        <Route path="/*" component={NotFound}/>
-   </Switch>
+     </Switch>
+    
+
+   
  </BrowserRouter>
 
     )

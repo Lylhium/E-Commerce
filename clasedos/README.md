@@ -1,3 +1,26 @@
+                                                     Proyecto Coco Light. 
+                                                  /////////////////////////
+Este proyecto se encarga en la Funcionalidad y integridad de CocoLight a un sitio Web para su venta de Productos de Cosmetica y Suplementos.
+
+El objetivo a llevar a cabo es hacer del sitio Web funcional y interactivo, tanto para el usuario y administrador, y el mantenimiento de este mismo.
+
+                                                        Instalacion 
+                                                ////////////////////////////
+Se utiliza Principalmente React, con elementos HTML y Javascript. 
+
+
+                                                        Como Contribuir
+                                            ////////////////////////////////////
+ 
+ Podes crear un Pull con una Request al proyecto.
+
+                                                           Licencia 
+                                            ///////////////////////////////////////
+
+                                                       Cocolight©  2021.
+ 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

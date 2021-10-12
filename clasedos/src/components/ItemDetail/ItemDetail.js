@@ -30,7 +30,7 @@ function ItemDetail(props) {
                  <div className='item-title-desc'>
                     <h1> {props.data.title} </h1>
                     <h2> {props.data.description} </h2>
-                    <h3>{props.data.price}</h3>
+                    <h3>${props.data.price}</h3>
                     <div className="item-contador"> <ItemCount onAdd={onAdd} onSubstract={onSubstract} items={items}/> </div> 
                  <div className='btn'>
                  <button className="button1"> <Link to='/cart' style={{ textDecoration: 'none',color:'black'}} >Comprar</Link> </button>
