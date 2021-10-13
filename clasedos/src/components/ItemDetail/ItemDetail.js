@@ -1,9 +1,11 @@
 //imports
-import React,{useState, useEffect} from "react";
-import  { Link } from 'react-router-dom'
-import "../ItemDetail/ItemDetail.css"
+import React,{useState, useContext} from "react";
 
+import "../ItemDetail/ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount";
+//context
+import { CartContext } from "../../Context/CartContext/CartContext";
+
 
 function ItemDetail(props) {
 
@@ -22,6 +24,15 @@ function ItemDetail(props) {
       items !== 0 && setItems (items - 1)
     
    }    
+   
+   const [cart,setCart,clear,PrecioTotal]= useContext(CartContext);
+   const addItem = () => {
+      const product = { item: props.data.title, price: props.data.price , };
+      setCart(currenState => [...currenState, product])
+      console.log ( cart )
+  }
+
+
     return ( 
     <div className="Item-Detail">       
               <div className="item-image"> 
@@ -33,7 +44,7 @@ function ItemDetail(props) {
                     <h3>${props.data.price}</h3>
                     <div className="item-contador"> <ItemCount onAdd={onAdd} onSubstract={onSubstract} items={items}/> </div> 
                  <div className='btn'>
-                 <button className="button1"> <Link to='/cart' style={{ textDecoration: 'none',color:'black'}} >Comprar</Link> </button>
+                 <button className="button1" onClick={addItem} >  Comprar  </button>
                  </div> 
               <div className='item-stock'>(quedan {props.data.stock} disponibles.)</div>
               <div className="descuento"> *5% de descuento Pagando en efectivo o transferencia.</div>

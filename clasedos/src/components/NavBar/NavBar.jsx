@@ -31,9 +31,7 @@ const NavBar = (props) => {
 ]
 
 )
-const [cart, setCart]= useContext(CartContext);
-const PrecioTotal = cart.reduce((acc,curr) => acc + curr.price , 0);
-
+const [cart,setCart,clear,addItem,PrecioTotal]= useContext(CartContext);
 return (
 
 <AppBar className= "animate__animated animate__bounce" position="sticky"  style={{ background: 'transparent', boxShadow: 'none'}}>
@@ -62,7 +60,7 @@ return (
 
             <div className="cart-button"><Link to='/cart'style={{ textDecoration: 'none',color:'white'}}> 
       <Button variant="contained">
-      <span> items en carrito : {cart.length}</span>
+      <span>{cart.length}</span>
       <FontAwesomeIcon icon={faCartPlus}/> 
       </Button>
       </Link>
