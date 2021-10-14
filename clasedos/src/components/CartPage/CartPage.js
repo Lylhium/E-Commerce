@@ -8,7 +8,7 @@ import { CartContext }  from '../../Context/CartContext/CartContext';
 
 
 export default function CartPage() {
-    const [cart,clear,removeItem]= useContext(CartContext);
+    const [cart,setCart,clear,removeItem]= useContext(CartContext);
 
     const PrecioTotal = cart.reduce((acc,curr) => acc + curr.price , 0);
 
