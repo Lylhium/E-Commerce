@@ -55,9 +55,6 @@ return (
             <li><Link to='/contacto' style={{ textDecoration: 'none',color:'white'}}> <Button color="inherit">Contacto</Button></Link></li> 
         </ul>
 
- 
-      
-
             <div className="cart-button"><Link to='/cart'style={{ textDecoration: 'none',color:'white'}}> 
       <Button variant="contained">
       <span>{cart.length}</span>

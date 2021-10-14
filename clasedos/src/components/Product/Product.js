@@ -1,35 +1,25 @@
 import React,{useState, useContext} from "react";
-import ItemCount from "../ItemCount/ItemCount"
+
 import '../Product/Product.css'
+import Counter from "../Counter/Counter";
 //context
 import { CartContext } from "../../Context/CartContext/CartContext";
 
 
 const  Product= (props) => {
-  
-    const [items, setItems]  = useState(0)
+    
+    const { stock } = props
+    const handleOnAdd = count => addItem(props, count)
 
-    const onAdd = () => {
-       
-       {if(items < props.stock){
-          setItems (items + 1)
-          }
-         }
-        }
- 
-    const  onSubstract = () => {
-       items !== 0 && setItems (items - 1)
-     
-
-       
-    }    
 
 const [cart, setCart] = useContext(CartContext);
 
 const addItem = () => {
-    const product = { item: props.title, price: props.price , };
+    const product = { id: props.id ,title: props.title, price: props.price ,img: props.image };
     setCart(currenState => [...currenState, product])
-    console.log ( cart )
+    console.log ( 'items en el carro:',cart )
+
+    
 }
     
 return (
@@ -40,8 +30,7 @@ return (
                   <div className='producto-title'> {props.title} </div>
                   <div className='producto-description'> {props.description} </div>
                   <p className="price"> $ {props.price} </p>
-                  <div className="item-contador"> <ItemCount onAdd={onAdd} onSubstract={onSubstract} items={items}/> </div>    
-                  <button className="button1" onClick={addItem} >  Comprar  </button>
+                  <div className="item-contador"> <Counter stock={stock} onAdd={handleOnAdd}  /> </div>    
                   <a className="button2" href={`/ItemDetailPage/${props.id} ` } style={{ textDecoration: 'none',color:'black'}}>  Ver  </a>
         </div> 
     </div>

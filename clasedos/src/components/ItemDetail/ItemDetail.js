@@ -1,35 +1,24 @@
 //imports
-import React,{useState, useContext} from "react";
+import React,{ useContext} from "react";
 
+import Counter from "../Counter/Counter";
 import "../ItemDetail/ItemDetail.css"
-import ItemCount from "../ItemCount/ItemCount";
+
 //context
 import { CartContext } from "../../Context/CartContext/CartContext";
 
 
 function ItemDetail(props) {
 
+   const { stock } = props
+   const handleOnAdd = count => addItem(props, count)
 
-   const [items, setItems]  = useState(0)
-
-   const onAdd = () => {
-      
-      {if(items < props.data.stock){
-         setItems (items + 1)
-         }
-        }
-       }
-
-   const  onSubstract = () => {
-      items !== 0 && setItems (items - 1)
-    
-   }    
    
    const [cart,setCart,clear,PrecioTotal]= useContext(CartContext);
    const addItem = () => {
-      const product = { item: props.data.title, price: props.data.price , };
+      const product = {id: props.data.id, title: props.data.title, price: props.data.price ,img: props.data.img };
       setCart(currenState => [...currenState, product])
-      console.log ( cart )
+      console.log ('items en el carro:', cart )
   }
 
 
@@ -42,11 +31,10 @@ function ItemDetail(props) {
                     <h1> {props.data.title} </h1>
                     <h2> {props.data.description} </h2>
                     <h3>${props.data.price}</h3>
-                    <div className="item-contador"> <ItemCount onAdd={onAdd} onSubstract={onSubstract} items={items}/> </div> 
+                    <div className="item-contador"> <Counter stock={props.data.stock} onAdd={handleOnAdd}  /> </div> 
                  <div className='btn'>
-                 <button className="button1" onClick={addItem} >  Comprar  </button>
+             
                  </div> 
-              <div className='item-stock'>(quedan {props.data.stock} disponibles.)</div>
               <div className="descuento"> *5% de descuento Pagando en efectivo o transferencia.</div>
                 <div className="thoughts"> *Sacate las dudas Antes de comprar si tenes alguna duda escribinos por Whatsapp. </div>
                     </div>
