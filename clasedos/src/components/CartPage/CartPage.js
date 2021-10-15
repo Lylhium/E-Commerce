@@ -7,12 +7,18 @@ import { CartContext }  from '../../Context/CartContext/CartContext';
 
 
 
-export default function CartPage() {
-    const [cart,setCart,clear,removeItem]= useContext(CartContext);
+export default function CartPage(props) {
+     const [cart,setCart,clear]= useContext(CartContext);
 
     const PrecioTotal = cart.reduce((acc,curr) => acc + curr.price , 0);
 
-
+    const removeItemFromCart = (id) => {
+    
+        setCart(cart.filter(item => item.id !== id) 
+      
+        )
+      }
+    
     
     return (
             <div className="Contenedor">
@@ -21,7 +27,9 @@ export default function CartPage() {
            <div className= "cart-product">
             {cart.map(item => ( <div>  <img alt="imagen producto" src={`../assets/${item.img}`}/>  
             <a className=" cart-title-box"> {item.title} </a>
-             <a className="cart-price-box">  $ {item.price} </a>
+             <a className="cart-price-box">  $ {item.price}  </a>
+             <button onClick={ () => removeItemFromCart(item.id)} className='remove'> X  </button>
+                
               </div>  ))}
            </div>
            <br/>

@@ -19,8 +19,8 @@ const addItem = () => {
     setCart(currenState => [...currenState, product])
     console.log ( 'items en el carro:',cart )
 
-    
 }
+
     
 return (
        

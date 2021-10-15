@@ -12,7 +12,7 @@ export default function ListProducts() {
               setTimeout(()=>{
          const mockProducts = [ 
           {
-            id: '1',
+            id: 1,
             title: "Cacao en polvo" ,
             img: 'producto1.png' ,
             price: 650 ,
