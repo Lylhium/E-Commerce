@@ -114,14 +114,25 @@ div.button-buy-position{
     background-color:white;
             }
 
-            button.remove {
-                color: white;
-                background-color: rgb(41, 39, 39);
-                padding-left: 15px;
-                padding-top: 5px;
-                padding-bottom: 5px;
-                padding-right: 15px;
-                font-size: 25px;
-                border-radius: 15px;
-                
+  button.remove {
+       color: white;
+       background-color: rgb(41, 39, 39);
+       padding-left: 15px;
+       padding-top: 5px;
+       padding-bottom: 5px;
+       padding-right: 15px;
+       margin:0 0.3em 0.3em 0;
+       box-sizing: border-box;
+       text-decoration:none;
+       transition: all 0.2s;
+       cursor: pointer;
+       font-size: 25px;      
+       border-radius: 15px;
+       
             }
+            .remove:hover{
+        
+                color:rgb(0, 0, 0) ;
+                border:0.1em solid rgb(41, 39, 39);
+                background-color:white;
+                        }

@@ -31,7 +31,7 @@ const NavBar = (props) => {
 ]
 
 )
-const [cart,setCart,clear,addItem,PrecioTotal]= useContext(CartContext);
+const [cart]= useContext(CartContext);
 return (
 
 <AppBar className= "animate__animated animate__bounce" position="sticky"  style={{ background: 'transparent', boxShadow: 'none'}}>

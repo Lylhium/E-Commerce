@@ -1,7 +1,6 @@
 //imports
 import React, {useContext} from 'react';
 import '../CartPage/CartPage.css'
-import Counter from '../Counter/Counter';
 //contexts
 import { CartContext }  from '../../Context/CartContext/CartContext';
 
@@ -25,7 +24,7 @@ export default function CartPage(props) {
             <u> <h2 className='cart-title'>🛒 Carrito</h2> </u>
            <br/>
            <div className= "cart-product">
-            {cart.map(item => ( <div>  <img alt="imagen producto" src={`../assets/${item.img}`}/>  
+            {cart.map(item => ( <div>  <img alt="imagen producto" href='imgproduct' src={`../assets/${item.img}`}/>  
             <a className=" cart-title-box"> {item.title} </a>
              <a className="cart-price-box">  $ {item.price}  </a>
              <button onClick={ () => removeItemFromCart(item.id)} className='remove'> X  </button>

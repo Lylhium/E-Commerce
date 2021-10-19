@@ -6,7 +6,8 @@ export const CartProvider = (props) => {
   const [cart, setCart] = useState([]);
 
   const addItem = () => {
-    const product = { id: props.id, title: props.title, price: props.price ,img: props.image};
+
+    const product = { id: props.id, title: props.title, price: props.price ,img: props.image  };
     setCart(currenState => [...currenState, product])
     console.log ( 'items en el carro:',cart )
 

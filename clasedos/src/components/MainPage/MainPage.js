@@ -6,8 +6,6 @@ export default function MainPage() {
         <div className='background'>
         <div>
             <img className="solid-img" src="../../assets/solid-image.jpg" alt='imagen inicio' />
-    
-         
         </div>
         </div>
         

@@ -10,11 +10,11 @@ import { CartContext } from "../../Context/CartContext/CartContext";
 
 function ItemDetail(props) {
 
-   const { stock } = props
+  
    const handleOnAdd = count => addItem(props, count)
 
    
-   const [cart,setCart,clear,PrecioTotal]= useContext(CartContext);
+   const [cart,setCart]= useContext(CartContext);
    const addItem = () => {
       const product = {id: props.data.id, title: props.data.title, price: props.data.price ,img: props.data.img };
       setCart(currenState => [...currenState, product])

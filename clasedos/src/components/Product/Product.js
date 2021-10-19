@@ -1,4 +1,4 @@
-import React,{useState, useContext} from "react";
+import React,{ useContext,useState} from "react";
 
 import '../Product/Product.css'
 import Counter from "../Counter/Counter";
@@ -12,10 +12,13 @@ const  Product= (props) => {
     const handleOnAdd = count => addItem(props, count)
 
 
+    
 const [cart, setCart] = useContext(CartContext);
 
-const addItem = () => {
-    const product = { id: props.id ,title: props.title, price: props.price ,img: props.image };
+
+
+const addItem = ()  => {
+    const product = { id: props.id ,title: props.title, price: props.price ,img: props.image, };
     setCart(currenState => [...currenState, product])
     console.log ( 'items en el carro:',cart )
 
