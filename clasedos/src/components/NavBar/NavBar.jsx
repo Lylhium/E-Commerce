@@ -40,7 +40,9 @@ return (
       <Toolbar>
        <Typography variant="h6">
         <div className="CocoLogo">
+        <Link to='/'>
             <img  src= {Logo} alt={'logoMain'}/>
+        </Link>
         </div>
       </Typography>
         <ul className="Lista-NavBar">
