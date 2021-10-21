@@ -25,7 +25,7 @@ function ItemDetail(props) {
     return ( 
     <div className="Item-Detail">       
               <div className="item-image"> 
-                 <img alt='imagendeproducto'src={`../assets/${props.data.img } `} />
+                 <img alt='imagendeproducto'src={`../assets/${props.data.img}`} />
               </div>
                  <div className='item-title-desc'>
                     <h1> {props.data.title} </h1>
@@ -33,8 +33,7 @@ function ItemDetail(props) {
                     <h3>${props.data.price}</h3>
                     <div className="item-contador"> <Counter stock={props.data.stock} onAdd={handleOnAdd}  /> </div> 
                  <div className='btn'>
-             
-                 </div> 
+   </div> 
               <div className="descuento"> *5% de descuento Pagando en efectivo o transferencia.</div>
                 <div className="thoughts"> *Sacate las dudas Antes de comprar si tenes alguna duda escribinos por Whatsapp. </div>
                     </div>

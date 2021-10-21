@@ -6,10 +6,14 @@ import { CartContext }  from '../../Context/CartContext/CartContext';
 
 
 
-export default function CartPage(props) {
-     const [cart,setCart,clear]= useContext(CartContext);
+export default function CartPage() {
+    const [cart,setCart,clear]= useContext(CartContext);
 
-    const PrecioTotal = cart.reduce((acc,curr) => acc + curr.price , 0);
+    const PrecioTotal = cart.reduce((acc,curr) => acc + curr.price * curr.count , 0);
+
+    const itemTotal = cart.reduce((acc,curr) => acc + curr.count,0);
+
+   
 
     const removeItemFromCart = (id) => {
     
@@ -24,18 +28,18 @@ export default function CartPage(props) {
             <u> <h2 className='cart-title'>🛒 Carrito</h2> </u>
            <br/>
            <div className= "cart-product">
-            {cart.map(item => ( <div>  <img alt="imagen producto" href='imgproduct' src={`../assets/${item.img}`}/>  
-            <a className=" cart-title-box"> {item.title} </a>
+            {cart.map(item => ( <div>  <img alt="imagen producto" href='imgproduct' src={`../assets/${item.img}`}  />  
+            <a className=" cart-title-box"> {item.count}x  {item.title} </a>
              <a className="cart-price-box">  $ {item.price}  </a>
              <button onClick={ () => removeItemFromCart(item.id)} className='remove'> X  </button>
-                
               </div>  ))}
            </div>
            <br/>
            <div className='clear-button-position'>
+           <div className='total-product-cart'> Hay un total de {itemTotal} productos en el carro.</div>
            <button className="clear-button" onClick={clear}>🚮 Limpiar carrito  </button>
            </div>
-           <div className='total-product-cart'> Hay un total de {cart.length} productos en el carro.</div>
+          
           
            <div className="total-price-box">precio total: $ {PrecioTotal} </div>
   

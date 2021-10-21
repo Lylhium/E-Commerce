@@ -32,6 +32,8 @@ const NavBar = (props) => {
 
 )
 const [cart]= useContext(CartContext);
+const itemTotal = cart.reduce((acc,curr) => acc + curr.count,0);
+
 return (
 
 <AppBar className= "animate__animated animate__bounce" position="sticky"  style={{ background: 'transparent', boxShadow: 'none'}}>
@@ -42,27 +44,30 @@ return (
         </div>
       </Typography>
         <ul className="Lista-NavBar">
-            <li><Link to='/' style={{ textDecoration: 'none',color:'white'}}>  <Button color="inherit">Home</Button></Link>
+            <li><Link to='/' style={{ textDecoration: 'none',color:'white' }}>  <Button color="inherit">Home</Button></Link>
             </li>
+            <div className='dropdown'>
             <li>
-            <Link to='/productos' style={{ textDecoration: 'none',color:'white'}}>  <Button color="inherit">Productos</Button> </Link>
-       
-            {categories.map ( (category)  => {
-             return  <a style={{ textDecoration: 'none',color:'white'}} href={`/category/${category.id} ` }> {category.name} </a >
-            })}
+            <Link to='/productos' style={{ textDecoration: 'none',color:'white'}}> <Button color="inherit">Productos</Button>
+            <div className='dropdown-content'>
+            {categories.map ((category)=> {
+             return  <Link to={`/category/${category.id}`} style={{ textDecoration: 'none',color:'white'}} > <Button className='boton-dropdown' color="inherit"> {category.name}  </Button>  </Link>
+             }) }
+             </div>
+             </Link>
             </li> 
+            </div>
             <li><Link to='/preguntas' style={{ textDecoration: 'none',color:'white'}}> <Button color="inherit">Preguntas Frecuentes</Button></Link></li> 
             <li><Link to='/contacto' style={{ textDecoration: 'none',color:'white'}}> <Button color="inherit">Contacto</Button></Link></li> 
         </ul>
-
-            <div className="cart-button"><Link to='/cart'style={{ textDecoration: 'none',color:'white'}}> 
-      <Button variant="contained">
-      <span>{cart.length}</span>
-      <FontAwesomeIcon icon={faCartPlus}/> 
-      </Button>
-      </Link>
-           </div>
-      </Toolbar>
-      </AppBar>
-      ); }
+            <div className="cart-button">
+              <Link to='/cart'style={{ textDecoration: 'none',color:'white'}}> 
+                  <span className='nmb-cart'>{itemTotal} </span>
+                  <FontAwesomeIcon icon={faCartPlus}/> 
+              </Link>
+            </div>
+        </Toolbar>
+</AppBar>
+      );
+     }
         export default  NavBar;

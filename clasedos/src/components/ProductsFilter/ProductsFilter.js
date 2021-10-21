@@ -53,7 +53,7 @@ export default function ProductsFilter() {
  },  
   {
   id: '5',
-  title: "Serum Multivitaminico" ,
+  title: "Serum vitaminico" ,
   img: 'producto5.jpg' ,
   price: 830 ,
   description: 'de 60ml.',
@@ -91,7 +91,7 @@ export default function ProductsFilter() {
  
 ]   
          resolve(mockProducts) 
-         }, 2000)  
+         }, 300)  
 
 })   
         useEffect(() => { 
@@ -117,19 +117,14 @@ export default function ProductsFilter() {
         
                      return (
                    
-         <Product key={`item-${product.id}`} title={product.title} price={product.price} image={product.img} stock={product.stock} description={product.description} id={product.id} /> 
-         )
-           } )
-        ) : (
-      <div className='loading'> 
-       <img src={('../../assets/loading.gif')}   alt='loading-gif'/> 
-      </div>
-         
-        )}
-
-
-
-      </div>
-      
+         <Product key={`item-${product.id}`} title={product.title} price={product.price} image={product.img} 
+         stock={product.stock} description={product.description} id={product.id} /> 
+         )})
+           ) : (
+          <div className='loading'> 
+            <img src={('../../assets/loading.gif')}   alt='loading-gif'/> 
+          </div>  
+          )}
+          </div>      
     )
   }
