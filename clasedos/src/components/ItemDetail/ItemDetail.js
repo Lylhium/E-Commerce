@@ -11,12 +11,12 @@ import { CartContext } from "../../Context/CartContext/CartContext";
 function ItemDetail(props) {
 
   
-   const handleOnAdd = count => addItem(props, count)
+   const handleOnAdd = count => addItem( count)
 
    
    const [cart,setCart]= useContext(CartContext);
-   const addItem = () => {
-      const product = {id: props.data.id, title: props.data.title, price: props.data.price ,img: props.data.img };
+   const addItem = (count) => {
+      const product = {id: props.data.id, title: props.data.title, price: props.data.price ,img: props.data.img ,count: count};
       setCart(currenState => [...currenState, product])
       console.log ('items en el carro:', cart )
   }
