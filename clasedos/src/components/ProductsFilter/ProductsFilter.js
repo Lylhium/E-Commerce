@@ -106,7 +106,7 @@ export default function ProductsFilter() {
                 
                 }
         })
-    },[ObtenerProducts])
+    },)
  
     return (
  

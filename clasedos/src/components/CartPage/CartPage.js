@@ -13,8 +13,6 @@ export default function CartPage() {
 
     const itemTotal = cart.reduce((acc,curr) => acc + curr.count,0);
 
-   
-
     const removeItemFromCart = (id) => {
     
         setCart(cart.filter(item => item.id !== id) 
@@ -27,20 +25,16 @@ export default function CartPage() {
             <div className="Contenedor">
             <u> <h2 className='cart-title'>🛒 Carrito</h2> </u>
            <br/>
-           <div className= "cart-product">
-            {cart.map(item => ( <div>  <img alt="imagen producto" href='imgproduct' src={`../assets/${item.img}`}  />  
-            <a className=" cart-title-box"> {item.count}x  {item.title} </a>
-             <a className="cart-price-box">  $ {item.price}  </a>
-             <button onClick={ () => removeItemFromCart(item.id)} className='remove'> X  </button>
-              </div>  ))}
-           </div>
+            {cart.map(item => ( <div className='cart-product'>  <div className='imagen'> <img alt="imagen producto" href='imgproduct' src={`../assets/${item.img}`}/> </div>  
+            <div className=" cart-title-box"> {item.count}x  {item.title}  </div>
+             <div  className="cart-price-box">  $ {item.price} <button onClick={ () => removeItemFromCart(item.id)} className='remove'> X  </button> </div>
+            </div>  ))}
            <br/>
            <div className='clear-button-position'>
            <div className='total-product-cart'> Hay un total de {itemTotal} productos en el carro.</div>
-           <button className="clear-button" onClick={clear}>🚮 Limpiar carrito  </button>
+           <button className="clear-button" onClick={clear}>🚮 Vaciar Carrito </button>
            </div>
-          
-          
+   
            <div className="total-price-box">precio total: $ {PrecioTotal} </div>
   
            <div className='button-buy-position'>

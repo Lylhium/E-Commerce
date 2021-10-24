@@ -11,37 +11,32 @@ div.contenedor {
 }
 
 div.cart-product  {
-    background-color: rgba(37, 37, 37, 0.164);
+    background-color: rgba(255, 255, 255, 0.164);
     color: rgb(90, 62, 42);
     font-size: 30px;
     border-radius: 15px;
     width: 100%;
     height: auto;
     padding-top: 10px;
+    
     }
 
 
-div.cart-product  img{
+div.imagen  img{
 
-background-color: black;
+border: 5px solid rgb(99, 97, 97);
 border-radius: 15px;
 width: 14%;
 height: auto;
 }
 
-a.cart-title-box {
+div.cart-title-box {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',
      Geneva, Verdana, sans-serif;
+     display: center;
 }
 
 
-a.cart-price-box {
-    
-    padding-right: 10px;
-    color: white;
-    border-radius: 15px;
-    background-color: rgb(41, 39, 39);
-}
 
 div.total-product-cart{
 

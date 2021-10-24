@@ -3,9 +3,6 @@ import React,{useState, useEffect} from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router";
 //firebase
-import db from "../../firebase";
-import {  collection, getDocs,doc,getDoc } from "@firebase/firestore";
-
 
 export  default ItemDetailContainer;
     
