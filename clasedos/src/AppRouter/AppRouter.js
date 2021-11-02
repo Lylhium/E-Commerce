@@ -33,9 +33,7 @@ export default function AppRouter(){
        <Route path="/cart" component={Cart}/>
        <Route path="/*" component={NotFound}/>
      </Switch>
-    
-
-   
+  
  </BrowserRouter>
 
     )

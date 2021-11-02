@@ -31,6 +31,8 @@ const clear = () => {
   return setCart ([])
 }
 
+
+
 return (
          <CartContext.Provider value= {[cart, setCart,clear,addItem,isInCart]}>
               {props.children}

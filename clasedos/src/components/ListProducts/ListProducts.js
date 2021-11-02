@@ -21,16 +21,11 @@ export default function ListProducts() {
     console.log ("products ID: ", ProductsID)
 
     return setProduct(ProductsList);
-
      }
-
-
-  
      useEffect (() => {
 
       Getproducts (db)
      },[])      
-
 
     return (
       <div>

@@ -32,8 +32,8 @@ const NavBar = (props) => {
 
 )
 const [cart]= useContext(CartContext);
-const itemTotal = cart.reduce((acc,curr) => acc + curr.count,0);
 
+const itemTotal = cart.reduce((acc,curr) => acc + curr.count,0);
 return (
 
 <AppBar className= "animate__animated animate__bounce" position="sticky"  style={{ background: 'transparent', boxShadow: 'none'}}>
