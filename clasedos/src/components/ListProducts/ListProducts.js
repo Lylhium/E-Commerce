@@ -25,6 +25,7 @@ export default function ListProducts() {
      useEffect (() => {
 
       Getproducts (db)
+      window.scrollTo(0, 0)
      },[])      
 
     return (

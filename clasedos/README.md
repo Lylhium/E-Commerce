@@ -17,7 +17,7 @@ Se utiliza Principalmente React, con elementos HTML y Javascript.
                                                            Licencia 
                                             ///////////////////////////////////////
 
-                                                       Cocolight©  2021.
+                                               Agustin Pfarherr.  Cocolight©  2021.
  
 
 

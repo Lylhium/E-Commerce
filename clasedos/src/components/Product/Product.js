@@ -34,12 +34,12 @@ return (
        
     <div className="card">
         <div className= "first-product">
-                  <img alt="imagen producto" src={`../assets/${props.image} `} />
-                  <div className='producto-title'> {props.title} </div>
-                  <div className='producto-description'> {props.description} </div>
-                  <p className="price"> $ {props.price} </p>
-                  <div className="item-contador"> <Counter stock={stock} onAdd={addItem}/> </div>    
-                  <Link to={`/ItemDetailPage/${props.id}`}>  <button className="button1"> Ver </button></Link>
+          <img alt="imagen producto" src={`../assets/${props.image} `} />
+          <div className='producto-title'> {props.title} </div>
+          <div className='producto-description'> {props.description} </div>
+          <p className="price"> $ {props.price} </p>
+          <div className="item-contador"> <Counter stock={stock} onAdd={addItem}/> </div>    
+          <Link to={`/ItemDetailPage/${props.id}`}>  <button className="button1"> Ver </button></Link>
         </div> 
     </div>
  ) }

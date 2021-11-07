@@ -7,6 +7,7 @@ import db from "../../firebase";
 import { doc, getDoc } from "@firebase/firestore";
 
 
+
 export  default ItemDetailContainer;
     
 function ItemDetailContainer() {
@@ -25,8 +26,11 @@ function ItemDetailContainer() {
   }
      useEffect (() => {
       Getproduct(db)
+      window.scrollTo(0, 0)
      },[])      
-              
+           
+     
+     
 return ( 
      <div className="Detail-Container">
        {<ItemDetail data= {ProductInfo}/>}

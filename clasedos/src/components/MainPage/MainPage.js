@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import '../MainPage/MainPage.css'
 export default function MainPage() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     return (
         <div className='background'>
