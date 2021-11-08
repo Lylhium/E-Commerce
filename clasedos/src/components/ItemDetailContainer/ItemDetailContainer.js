@@ -26,8 +26,7 @@ function ItemDetailContainer() {
   }
      useEffect (() => {
       Getproduct(db)
-      window.scrollTo(0, 0)
-     },[])      
+     })      
            
      
      

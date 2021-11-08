@@ -3,16 +3,30 @@
 Este proyecto se encarga en la Funcionalidad y integridad de CocoLight a un sitio Web para su venta de Productos de Cosmetica y Suplementos.
 
 El objetivo a llevar a cabo es hacer del sitio Web funcional y interactivo, tanto para el usuario y administrador, y el mantenimiento de este mismo.
+ 
+                                                   Preview (GIF) Del Proyecto.
+                                                  //////////////////////
+
+  ![](https://imgur.com/a/JFicMK2)
+
 
                                                         Instalacion 
                                                 ////////////////////////////
-Se utiliza Principalmente React, con elementos HTML y Javascript. 
+Se utiliza Principalmente React Native, con elementos HTML y Javascript. 
 
 
                                                         Como Contribuir
                                             ////////////////////////////////////
  
- Podes crear un Pull con una Request al proyecto.
+ Podes crear un Pull con una request para unirse a este  Proyecto.
+                                                       Dependencias Descargadas
+                                            ///////////////////////////////////////
+   En este proyecto se utiliza las siguientes dependencias las cuales son necesarias para el proyecto: 
+   - FontAwesome
+   - Material UI
+   - Firebase
+   - React-Router
+   - React-Dom
 
                                                            Licencia 
                                             ///////////////////////////////////////
