@@ -1,14 +1,14 @@
 
 .footer{
-    color: rgb(238, 238, 238);
-    background-color: rgb(54, 52, 52);
+    color:rgb(42, 111, 133);
+    background-color:white;
     bottom: 0;
     left: 0;
     width: 100%;
     text-align: center;
   }
   .footer-text{
-    background-color: rgb(31, 30, 30);
+    background-color: rgb(255, 255, 255);
     font-size: 25px;
   }
   div.footer-links {
@@ -21,40 +21,17 @@
     text-decoration: none;
     color: rgb(51, 45, 40);
     text-align: center;
-    padding: 15px;
-    background-color: brown;
+    padding: 25px;
     border-radius: 15px;
    }
-   div.footer-links a.whatsapp{
-    color: rgb(241, 241, 241);
-    background-color: #358a54;
-    transition: all 0.2s;
-  }
-  div.footer-links a.instagram{
-    color: rgb(241, 241, 241);
-    background-color: #b94141;
-    transition: all 0.2s;
-  }
-  div.footer-links a.facebook{
-    color: rgb(241, 241, 241);
-    background-color: #3B5998;
-    transition: all 0.2s;
-  }
-  div.footer-links a.whatsapp:hover {
-    color: #358a54;
-    background-color: rgb(211, 207, 207);
-  }
-  div.footer-links a.instagram:hover {
-    color: #b94141;
-    background-color: rgb(211, 207, 207);
-  }
-  div.footer-links a.facebook:hover {
-    color: #3B5998;
-    background-color: rgb(211, 207, 207);
-  }
 
   div.footer-info {
-    color: rgb(146, 146, 145);
+    color: rgb(112, 112, 112);
     padding-top: 35px;
    font-size: 20px;
+}
+
+.footer-icon{
+  padding-right: 20px;
+  width:35%;
 }

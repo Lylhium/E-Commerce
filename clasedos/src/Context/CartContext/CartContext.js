@@ -5,7 +5,6 @@ export const CartContext = createContext();
 export const CartProvider = (props) => {
   const [cart, setCart] = useState([]);
 
-  
   const addItem = (count)  => {
     const product = { id: props.id ,title: props.title, price: props.price ,img: props.image, count: count};
   
@@ -14,14 +13,13 @@ export const CartProvider = (props) => {
 
   if (isInCart(product)) {
       console.log('esta en carro')
-      cartElement = cart.find( item => item.id === props.id) 
-      cartElement.count = cartElement.count + count
+     cartElement = cart.find( item => item.id === props.id) 
+     cartElement.count = cartElement.count + count
   } else {
       setCart(currenState => [...currenState, product])
   }
   
 }    
-
 
 const isInCart = () => {
     return cart && cart.some(item => item.id === props.id)

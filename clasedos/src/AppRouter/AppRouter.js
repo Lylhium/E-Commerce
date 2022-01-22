@@ -29,10 +29,9 @@ export default function AppRouter(){
        <Route path="/productos" component={Productos}/>
        <Route path="/preguntas" component={Preguntas}/>
        <Route path="/ItemDetailPage/:productId" component={ItemDetailPage}/>
-       <Route path="/category/:categoryId" component={ProductsFilter}/>
        <Route path="/cart" component={Cart}/>
        <Route path="/*" component={NotFound}/>
-     </Switch>
+      </Switch>
   
  </BrowserRouter>
 

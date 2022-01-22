@@ -30,8 +30,9 @@ const isInCart = () => {
     return cart && cart.some(item => item.id === props.id)
   }
 
+
 return (
-       
+    
     <div className="card">
         <div className= "first-product">
           <img alt="imagen producto" src={`../assets/${props.image} `} />
@@ -42,6 +43,7 @@ return (
           <Link to={`/ItemDetailPage/${props.id}`}>  <button className="button1"> Ver </button></Link>
         </div> 
     </div>
+
  ) }
     
       export default  Product

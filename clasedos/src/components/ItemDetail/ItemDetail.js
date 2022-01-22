@@ -36,18 +36,14 @@ function ItemDetail(props) {
 
     return ( 
     <div className="Item-Detail">       
-              <div className="item-image"> 
-                 <img alt='imagendeproducto'src={`../assets/${props.data.img}`} />
-              </div>
-                 <div className='item-title-desc'>
+                    <img alt='imagendeproducto' className='img-detail'src={`../assets/${props.data.img}`} />
+                    <div className='item-title-desc'>
                     <h1> {props.data.title} </h1>
-                    <h2> {props.data.description} </h2>
+                    <div className="item-desc"> {props.data.description} </div>
                     <h3>${props.data.price}</h3>
                     <div className="item-contador"> <Counter stock={props.data.stock} onAdd={addItem}  /> </div> 
-                 <div className='btn'>
-   </div> 
-              <div className="descuento"> *5% de descuento Pagando en efectivo o transferencia.</div>
-                <div className="thoughts"> *Sacate las dudas Antes de comprar si tenes alguna duda escribinos por Whatsapp. </div>
+                    <div className="descuento"> *5% de descuento Pagando en efectivo o transferencia.</div>
+                    <div className="thoughts"> *Sacate las dudas Antes de comprar si tenes alguna duda escribinos por Whatsapp. </div>
                     </div>
            
               </div>  

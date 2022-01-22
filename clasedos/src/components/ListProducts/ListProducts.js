@@ -18,8 +18,6 @@ export default function ListProducts() {
     const productsSnapShot = await getDocs (productsCollection);
     const ProductsList = productsSnapShot.docs.map(doc => doc.data ());
     const ProductsID = productsSnapShot.docs.map ( doc => doc.id)
-    console.log ("products ID: ", ProductsID)
-
     return setProduct(ProductsList);
      }
      useEffect (() => {
@@ -34,6 +32,7 @@ export default function ListProducts() {
         products.map( (product)=> {
 
         return (
+          
                  <Product key={`item-${product.id}`} title={product.title} price={product.price} image={product.img} 
                                         stock={product.stock} description={product.description} id={product.id} /> )
            })

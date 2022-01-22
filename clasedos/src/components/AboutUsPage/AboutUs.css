@@ -1,6 +1,6 @@
 
 div.main-title{
-    background-color: rgba(27, 27, 34, 0.993);
+    background-color: rgba(38, 110, 116, 0.842);
      border-radius: 15px;
     text-align: center;
     padding: 15px;
@@ -18,7 +18,16 @@ div.Contenedor{
     font-size: 25px;
     padding-top: 100px;
     text-align: center;
-    color: rgb(226, 222, 219);
+    color: rgb(255, 255, 255);
+    object-fit: contain;
+    object-position: top;
+    animation: fadein 1s ease-in-out forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+}
+@keyframes fadein{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 img.pfp {
     height:auto;

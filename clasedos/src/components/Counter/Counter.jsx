@@ -9,9 +9,9 @@ const Counter = ({stock, initial = 0, onAdd}) => {
 		<div>
 			<div>
 				<button disabled={stock === 0 || count <= 0} onClick={() => setCount(count - 1)} 
-				className='substract' >-</button>
+				className='substract' > - </button>
 				
-				<span>{stock === 0 ? 'Sin stock' : count}</span>
+				<span className='btn-stock'>{stock === 0 ? 'Sin stock' : count}</span>
 				<button disabled={stock === 0 || count >= stock } onClick={() => setCount(count + 1)} 
 				 className="add">+</button>
 			</div>
